@@ -1,0 +1,41 @@
+/* students {
+    display: flex;
+    padding-left: 50px;
+  } */
+  
+  note {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  to,from,heading,body {
+    font-weight: bold;
+  }
+  
+  to {
+    color: blue;
+  }
+  
+  from {
+    color: green;
+  }
+  
+  heading {
+    color: purple;
+  }
+  
+  body {
+    color: orange;
+  }
+  
+  /* year {
+    color: red;
+  } */
+  
+  email {
+    color: brown;
+  }
+  

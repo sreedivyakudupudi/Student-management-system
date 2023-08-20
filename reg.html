@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            color: azure;
+        }
+    </style>
+    <link rel="stylesheet" href="bgstyle.css">
+   <script>
+    function validate_password2()
+		{
+			var pswd=document.getElementById("pwd");
+			var pswd2=document.getElementById("cpwd");
+			var p3=document.getElementById("p3");
+			if(pswd.value==pswd2.value)
+			{
+				p3.innerHTML = "&#10004;";
+				p3.style.color="skyblue";
+				pswd2.style.color="green";	
+			}
+			else
+			{
+				p3.innerHTML = "x";
+				p3.style.color="red";
+				pswd2.style.color="red";
+			}
+		}
+         
+
+
+    </script> 
+</head>
+<body>
+    <form>
+        <h1>Registration Page</h1>  
+        
+        
+            <div class="uname">
+                <label for="uname">User Name:</label>
+            <input type="text" id="fname" placeholder="Enter your name" pattern="[a-zA-Z]{6,}"><br>
+            </div>
+            <br>
+            <div class="email">
+                <label for="email">E-mail ID:</label>
+            <input type="email" id="email" placeholder="Enter your email" pattern="[a-zA-Z]{1,}@[a-zA-Z]{1,}.com"><br>
+            </div>
+            <br>
+            <div class="phno">
+                <label for="phno">Mobile Number:</label>
+            <input type="text" id="number" placeholder="Enter your-- Mobile number" pattern="[6-9][0-9]{9}"><br>
+            </div>
+            <br>
+            <div class="dob">
+                <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob"><br>
+            </div>
+            <br>
+            <div class="add">
+                <label for="add">Address</label>
+                <textarea id="add" name="add" rows="4" cols="50" placeholder="Enter Address">
+
+                </textarea>
+                    
+            </div>
+            <div class="gen">
+                <p>Select your Gender</p>
+                <label for="Gen">Male:</label>
+            <input type="radio" id="gen" name="gender" value="Male"><br>
+            <label for="Gen">Female:</label>
+            <input type="radio" id="gen" name="gender" value="Female"><br>
+            </div>
+            <br>
+            
+            <label for="pwd">PassWord:</label>
+            <input type="password" id = "pwd" placeholder="Enter Password"  title="Must contain atleast one number and one uppercase and lowercase letter,and atleast 8 or more characters" required><br>
+            <br>
+           
+            <label for="cpwd">Confirm PassWord:</label>
+            <input type="password" id="cpwd" placeholder="Re-enter Password" onkeyup="validate_password2()">
+            <span id="p3"></span>
+            <br>
+            <br>
+            <div class="rem">
+                <label>
+                    <input type="checkbox" name="item" checked />
+                    <span class="text-checkbox">Remember me</span>
+                    </label>
+            </div>
+            <br>
+            <button class="btn">Submit</button>
+            <a href="login.html">Login</a>  
+    </form>
+<div id="message">
+    <h3 style="color:white">Password must contain:</h3>
+    <p id="letter" class="invalid" style="color:white">A <b>lowecase</b> letter</p>
+    <p id="capital" class="invalid" style="color:white">A <b>UpperCase</b> letter</p>
+    <p id="number" class="invalid" style="color:white">A <b>number</b> letter</p>
+    <p id="length" class="invalid" style="color:white">Minimum <b>8 characters</b></p>
+</div>
+
+</body>
+</html>

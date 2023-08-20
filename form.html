@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            name_pat="[A-Za-z]{6,20}";
+            pwd_pat="[a-zA-z0-9]{4,12}";
+            u_name=document.getElementById("uname");
+            u_pwd=document.getElementById("pwd");
+            document.write(u_pwd.value);
+            if(u_name.value.match(name_pat) && pwd_pat.match(pwd_pat.value)){
+                document.getElementById("r").innerHTML="Success";
+                return true;
+            }
+            else{
+                alert("Invalid Credentials");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        Name: <input type="text" name="uname" id="uname">
+        <br>
+        Password: <input type="password" name="pwd" id="pwd">
+        <br><br>
+        <button type="Submit" onclick="validate()">Submit</button>
+    </form>
+    <span id="r"></span>
+</body>
+</html>

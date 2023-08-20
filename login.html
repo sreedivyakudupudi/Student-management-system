@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+
+        h1{
+            text-align: center;
+        }
+        button.btn{
+            margin-left: 170px;
+            border: 2px solid black;
+            padding: 4px 14px;
+            border-radius: 13px;
+            font-size: 16px;
+            cursor: pointer;
+            /* font-family: 'Bree Serif',serif; */
+            font-weight: bold;
+        }
+        
+        body {
+        background-image: url("female-1300399_1280.png");
+        background-size: cover;
+        background-color: rgb(230, 229, 229);
+        }
+        .form{
+            color: azure;
+            font-size: large;
+        }
+        input{
+            margin-left: 25px;
+            border: 2px solid black;
+            padding: 4px 14px;
+            border-radius: 13px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Bree Serif',serif;
+            font-weight: bold;
+        }
+    </style>
+      
+</head>
+<body>
+    <form action="">
+    <h1>Login Page</h1>
+    <div class="form">
+        <div class="uname">
+            <label for="uname">UserName : </label>
+        <input type="text" id="fname" placeholder="Enter username" pattern="[a-zA-Z]{6,}" title="Minimum length is 6">
+        </div>
+        <br>
+        <div id="pwd">
+            <label for="pwd">PassWord : </label>
+        <input type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one number and one uppercase and lowercase letter,and atleast 8 or more characters" required><br>
+    
+        
+    </div>
+    <br>
+    <button class="btn"> Submit</button>
+    <p><a href="forgot.html">forgotpassword?</a></p>
+</form>
+    
+    
+<p>Don't have an account? <a href="reg.html">Creat Your Account</a> it takes less than a minute</p>
+</div>
+</body>
+</html>
